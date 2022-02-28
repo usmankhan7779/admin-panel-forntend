@@ -1,0 +1,24 @@
+<div class="blog-login">
+    <div class="blog-login-in">
+        <form [formGroup]="myForm">
+            <img src="../../assets/images/logo.png" alt="" />
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="first_name1" formControlName="email" type="text" class="validate">
+                    <label for="first_name1">User Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="last_name" formControlName="password" type="password" class="validate">
+                    <label for="last_name">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <a class="waves-effect waves-light btn-large btn-log-in" (click)="login()">Login</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
