@@ -24,14 +24,14 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.http.post('http://localhost:7000/admin/login', this.myForm.value).subscribe((data: any) => {
-      if (data.token == "QpwL5tke4Pnpja7X4") {
+       localStorage.setItem('Token',data.token)
         Swal.fire({
           icon: 'success',
           title: 'Logged In',
           text: 'You have Successfully Logged In'
         })
-        // this.router.navigateByUrl('/dashboard');
-      }
+        this.router.navigate(['dashboard']);
+     
 
     })
 
